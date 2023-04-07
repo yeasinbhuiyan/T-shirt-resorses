@@ -1,0 +1,11 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(206, 202, 202, 0.835);
+    padding: 8px;
+
+}
+
+.navbar a{
+    margin-right: 20px;
+}

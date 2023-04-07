@@ -1,0 +1,11 @@
+.t-shirt-cart{
+    border: 1px solid rgba(128, 128, 128, 0.775) ;
+    padding: 20px;
+    /* height: 250px; */
+    border-radius: 12px;
+}
+
+.t-shirt-cart img{
+    height: 250px;
+    margin: 0 auto;
+}

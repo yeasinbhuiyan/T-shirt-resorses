@@ -10,6 +10,7 @@ import Main from './Components/Main.jsx/Main';
 import GrandPa from './Components/GrandPa/GrandPa';
 import OrederReview from './Components/OrderReview/OrederReview';
 import { loadData } from './Components/OrderReview/OrderLoadData';
+import Banner from './Components/Home/Banner/Banner';
 
 
 const router =createBrowserRouter([
@@ -19,6 +20,11 @@ element :<Home></Home>,
 children : [
   {
     path : '/',
+    element :  <Banner></Banner>,
+    // loader : ()=> fetch('tshirts.json')
+  },
+  {
+    path : '/shop',
     element :  <Main></Main>,
     loader : ()=> fetch('tshirts.json')
   },

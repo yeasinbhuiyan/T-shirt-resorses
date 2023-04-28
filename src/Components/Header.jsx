@@ -6,10 +6,16 @@ import { AuthContext } from './AuthProvider/AuthProvider';
 
 const Header = () => {
 
-    const { user } = useContext(AuthContext)
+    const { user,logOut } = useContext(AuthContext)
 
 
     const [open, setOpen] = useState(false)
+
+
+    const Logout=()=>{
+        logOut()
+
+    }
     return (
         <div className='navbar w-full'>
             <div>
@@ -20,7 +26,7 @@ const Header = () => {
                 <NavLink className={({ isActive }) => isActive ? 'text-yellow-600 font-semibold' : 'text-gray-600 font-semibold'} to='/shop'>Shop</NavLink>
                 <NavLink className={({ isActive }) => isActive ? 'text-yellow-600 font-semibold' : 'text-gray-600 font-semibold'} to='/orderReview'>Order Review</NavLink>
                 {
-                    !user ? <button className='btn btn-xs'>Logout</button> : <NavLink className={({ isActive }) => isActive ? 'text-yellow-600 font-semibold' : 'text-gray-600 font-semibold'} to='/login'><button className='btn btn-xs'>Login</button> </NavLink>
+                    user ? <><small className='me-2 font-bold text-yellow-700'> {user?.displayName} </small><button onClick={Logout} className='btn btn-xs'>Logout</button></>  : <NavLink className={({ isActive }) => isActive ? 'text-yellow-600 font-semibold' : 'text-gray-600 font-semibold'} to='/login'><button className='btn btn-xs'>Login</button> </NavLink>
 
                 }
             </div>
@@ -36,7 +42,7 @@ const Header = () => {
 
                             <ul>
                                 {
-                                    user ? <button className='btn btn-xs mb-3 ms-0'>Logout</button> :
+                                    user ? <li className='mb-3'> <small className='me-2 font-bold text-yellow-700'>{user?.displayName}</small><button onClick={Logout} className='btn btn-xs'>Logout</button></li>  :
                                         <li className='mb-3'>
                                             <NavLink className={({ isActive }) => isActive ? 'text-yellow-600 font-semibold' : 'text-gray-600 font-semibold'} to='/login'>Login</NavLink>
                                         </li>

@@ -16,7 +16,8 @@ const Login = () => {
     const { loginAccount } = useContext(AuthContext)
     const navigate = useNavigate()
     const location = useLocation()
-    const from = location.state?.from.pathname
+    
+    const from =location.state?.from.pathname
 
 
 
@@ -28,7 +29,7 @@ const Login = () => {
 
         
         const form = event.target
-        const name = form.name.value
+        // const name = form.name?.value
         
         // const email = form.email.value
         // const password = form.password.value
@@ -36,8 +37,8 @@ const Login = () => {
         loginAccount(email, password)
             .then(result => {
                 console.log(result)
-                navigate(from)
                 event.target.reset()
+                navigate(from || '/')
 
             })
             .catch(error => {

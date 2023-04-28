@@ -14,6 +14,7 @@ import Banner from './Components/Home/Banner/Banner';
 import Login from './Components/LoginAndRegistation/Login';
 import Registation from './Components/LoginAndRegistation/Registation';
 import AuthProvider from './Components/AuthProvider/AuthProvider';
+import PrivateProvider from './Components/AuthProvider/PrivateProvider';
 
 
 const router = createBrowserRouter([
@@ -28,12 +29,12 @@ const router = createBrowserRouter([
       },
       {
         path: '/shop',
-        element: <Main></Main>,
+        element: <PrivateProvider><Main></Main></PrivateProvider>,
         loader: () => fetch('tshirts.json')
       },
       {
         path: '/orderReview',
-        element: <OrederReview></OrederReview>,
+        element: <PrivateProvider><OrederReview></OrederReview></PrivateProvider>,
         loader: loadData
       },
       {

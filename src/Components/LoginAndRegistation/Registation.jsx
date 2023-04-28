@@ -5,13 +5,16 @@ import { AuthContext } from '../AuthProvider/AuthProvider';
 const Registation = () => {
     const { createAccount, userName, auth } = useContext(AuthContext)
     const location = useLocation()
-    console.log(location);
+    // console.log(location);
 
     const navigate = useNavigate()
+
     const handleRegister = (event) => {
+        console.log('this is register');
         event.preventDefault()
 
         const from = location.state?.from.pathname
+
 
         const form = event.target
         const name = form.name.value
@@ -54,7 +57,7 @@ const Registation = () => {
                             <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
-                            <input name='email' type="text" placeholder="email" className="input input-bordered" required />
+                            <input name='email' type="email" placeholder="email" className="input input-bordered" required />
                         </div>
                         <div className="form-control">
                             <label className="label">
@@ -71,7 +74,7 @@ const Registation = () => {
 
                         </div>
                         <div className="form-control mt-6">
-                            <button className="btn btn-black">Register</button>
+                            <button  className="btn btn-black">Register</button>
                         </div>
                         <p><small>Already have an account? <Link to='/login'>Login</Link></small></p>
                         {/* <p className='text-red-400'>{error}</p> */}

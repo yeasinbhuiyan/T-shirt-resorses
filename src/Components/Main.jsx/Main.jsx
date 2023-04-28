@@ -58,7 +58,7 @@ const Main = () => {
         setCart(deleteBtn)
     }
     return (
-        <div className='main-container'>
+        <div className='main-container my-10'>
             <div className='grid md:grid-cols-3 gap-6 m-4'>
                 {
                     shirts.map(shirt => <Tshirt handleAddBtn={handleAddBtn} shirt={shirt}></Tshirt>)

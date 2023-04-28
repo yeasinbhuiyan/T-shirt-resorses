@@ -9,22 +9,22 @@ const Banner = () => {
     console.log(allShirt)
     return (
         <div>
-            <div className='banner-section'>
-                <div data-aos="fade-up" className='my-auto text-center mx-auto md:py-10'>
+            <div className='banner-section '>
+                <div data-aos="fade-up" className='my-auto text-center mx-auto md:py-24'>
 
 
-                    <h1 className='text-7xl text-gray-400'>Enjoy Our <br /> Delicious Food</h1>
+                    <h1 className='text-7xl text-gray-400'>The Best Fabrics<br /> Are From Us Always</h1>
 
-                    <p className='text-gray-200 px-10 p-color  text-center my-5 text-xl'>Plants and animals are the main source  of food for all the organisms on earth.  Food obtained from animals is the main source of protein  and include fish, milk, meat, poultry, and cheese. Whereas plants provide us with fruits and vegetables, which are an important br source of fibres, proteins and carbohydrates</p>
+                    <p className='text-gray-200 px-10 p-color  text-center my-5 text-xl'>A T-shirt or tee for short, is a style of fabric shirt named after the T shape of its body and sleeves. Traditionally, it has short sleeves and a round neckline, known as a crew neck, which lacks a collar.</p>
 
                     <div data-aos-duration="1000" data-aos-easing="ease" data-aos="fade-down">
-                        <Link to='/' className='btn btn-xs py-1'> See T-Shirt Item</Link>
+                        <Link to='/shop' className='btn btn-xs py-1'> See T-Shirt Item</Link>
 
                     </div>
                 </div>
 
             </div>
-            <div className='chart-section'>
+            <div className='chart-section my-10'>
 
 
 

@@ -20,7 +20,7 @@ const OrederReview = () => {
 
     return (
         <div className='grid grid-cols-1 lg:grid-cols-2'>
-            <div>
+            <div className=''>
                 {
                     saveData.map(singleReview => <SingleReview handleDelete={handleDelete} singleReview={singleReview}></SingleReview>)
                 }

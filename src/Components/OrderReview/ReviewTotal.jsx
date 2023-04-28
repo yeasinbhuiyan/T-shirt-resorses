@@ -24,7 +24,7 @@ const ReviewTotal = ({ saveData }) => {
                 <h3 className='text-xl'> Tax : <span className='font-bold'>{tax}</span> </h3>
                 <h3 className='text-xl'> Shipping Charge : <span className='font-bold'>{shipping}</span></h3>
                 <h3 className='text-xl'> Delivery Charge : <span className='font-bold'> {delivery} </span></h3>
-                <h3 className='mt-5 text-2xl font-bold text-yellow-800'> Grand Total : {grandTotal}</h3>
+                <h3 className='mt-5 text-2xl font-bold text-yellow-800'> Grand Total : {grandTotal.toFixed(2)}</h3>
             </div>
 
         </div>

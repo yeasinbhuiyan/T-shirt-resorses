@@ -19,11 +19,11 @@ const Cart = ({ singleShirt, handleDelete, cart }) => {
     return (
       
         <div>
-            <div className='flex p-3 m-3 px-3 rounded-2xl items-center shadow-xl'>
+            <div className='flex p-3 m-3 md:p-3 pr-12 rounded-2xl items-center shadow-xl'>
                 <img className='w-12 h-12 rounded-md' src={picture} alt="" />
                <div className='font-semibold ml-2'>
                <h1 className=''>{name}</h1>
-                <p>price : <span className='font-bold'>{price}</span></p>
+                <p className='text-sm'>price : <span className='font-bold'>{price}</span></p>
                </div>
             </div>
         </div>

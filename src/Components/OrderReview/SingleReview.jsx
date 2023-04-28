@@ -1,5 +1,6 @@
 import React from 'react';
 import './SingleReview.css'
+import { FaRegTrashAlt } from 'react-icons/fa';
 const SingleReview = ({singleReview,handleDelete}) => {
     const {picture,_id,price,name} = singleReview
     return (
@@ -13,7 +14,7 @@ const SingleReview = ({singleReview,handleDelete}) => {
              </div>
            
               <div className='m-3'>
-                <button onClick={()=>handleDelete(singleReview._id)}>x</button>
+                <button onClick={()=>handleDelete(singleReview._id)}><FaRegTrashAlt></FaRegTrashAlt></button>
               </div>
             </div>
         
